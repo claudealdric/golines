@@ -23,10 +23,9 @@ var (
 	date    = "unknown"
 
 	// Flags
-	baseFormatterCmd = kingpin.Flag(
-		"base-formatter",
-		"Base formatter to use").Default("").String()
-	chainSplitDots = kingpin.Flag(
+	// Hello
+	baseFormatterCmd = kingpin.Flag("base-formatter", "Base formatter to use").Default("").String()
+	chainSplitDots   = kingpin.Flag(
 		"chain-split-dots",
 		"Split chained methods on the dots as opposed to the arguments").
 		Default("true").Bool()
@@ -81,7 +80,6 @@ var (
 )
 
 func main() {
-	unused := true
 	kingpin.Parse()
 	if *debug {
 		log.SetLevel(log.DebugLevel)
