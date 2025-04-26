@@ -16,7 +16,6 @@ import (
 )
 
 var (
-	unused = true
 	// these values are provided automatically by Goreleaser
 	//   ref: https://goreleaser.com/customization/builds/
 	version = "dev"
@@ -82,6 +81,7 @@ var (
 )
 
 func main() {
+	unused := true
 	kingpin.Parse()
 	if *debug {
 		log.SetLevel(log.DebugLevel)
