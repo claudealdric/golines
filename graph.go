@@ -55,10 +55,7 @@ func WalkGraph(root *GraphNode) (string, error) {
 	var currSeq int
 
 	// First, loop through the graph nodes to assign proper ids
-	for {
-		if len(toProcess) == 0 {
-			break
-		}
+	for len(toProcess) != 0 {
 
 		currNode := toProcess[0]
 

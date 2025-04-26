@@ -16,6 +16,7 @@ import (
 )
 
 var (
+	unused = true
 	// these values are provided automatically by Goreleaser
 	//   ref: https://goreleaser.com/customization/builds/
 	version = "dev"
@@ -258,5 +259,4 @@ func handleOutput(path string, contents []byte, result []byte) error {
 
 	fmt.Print(string(result))
 	return nil
-
 }
